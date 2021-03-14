@@ -44,7 +44,7 @@ class UserController extends BaseController
             return $this->sendResponse($success, 'User login successfully.');
         }
 
-        return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);
+        return $this->sendError('Incorrect user details.', ['error' => 'Unauthorized']);
     }
 
 
@@ -55,6 +55,7 @@ class UserController extends BaseController
 
         return $this->sendResponse([], 'User logout successfully.');
     }
+
 
     public function getMe()
     {
